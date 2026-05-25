@@ -1,0 +1,50 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+
+lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.13.2"
+      snapshot: false
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.1"
+      snapshot: false
+
+  server:
+    password: youshallnotpass
+
+    sources:
+      youtube: true
+      soundcloud: true
+      bandcamp: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+
+metrics:
+  prometheus:
+    enabled: false
+
+sentry:
+  dsn: ""
+
+lavasrc:
+  spotify:
+    enabled: true
+    clientId: 303fbf450eb34f14867a434d6d279c16
+    clientSecret: 27a4656e256f4b3eacc4006865b0b556
+    countryCode: US
+
+  deezer:
+    enabled: true
+
+  applemusic:
+    enabled: true
+
+  youtube:
+    enabled: true
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO
